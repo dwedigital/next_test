@@ -6,18 +6,19 @@ import { Invoice, LatestInvoice } from '@/app/lib/definitions';
 
 import prisma from '@/app/lib/prisma'
 
-interface InvoiceType{
+interface InvoiceType{ 
   id: number,
+  customer_id: number,
   amount: number,
   status: "PAID" | "UNPAID",
-  date: string,
+  date: Date, 
   customer: {
-    name: string,
-    email: string,
-    image_url: string,
-  },
-
-}
+    id: number, 
+    name: string, 
+    email: string, 
+    image_url: string | null 
+    }
+} 
 
 export default async function LatestInvoices() {
 
