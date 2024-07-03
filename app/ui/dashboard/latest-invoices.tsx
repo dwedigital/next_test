@@ -25,7 +25,7 @@ export default async function LatestInvoices() {
   const latestInvoices = await prisma.invoice.findMany({
     take: 5,
     orderBy: {
-      created_at: 'desc',
+      date: 'desc',
     },
     include: {
       customer: true,
