@@ -9,7 +9,7 @@ import prisma from '@/app/lib/prisma'
 interface InvoiceType{
   id: number,
   amount: number,
-  status: "PAID" | "Unpaid",
+  status: "PAID" | "UNPAID",
   date: string,
   customer: {
     name: string,
