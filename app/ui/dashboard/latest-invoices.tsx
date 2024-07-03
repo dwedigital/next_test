@@ -54,7 +54,7 @@ export default async function LatestInvoices() {
               >
                 <div className="flex items-center">
                   <Image
-                    src={invoice.customer.image_url}
+                    src={invoice.customer.image_url ? invoice.customer.image_url : '/avatar.png'}
                     alt={`${invoice.customer.image_url}'s profile picture`}
                     className="mr-4 rounded-full"
                     width={32}
