@@ -33,6 +33,11 @@ export default async function LatestInvoices() {
       customer: true,
     },
   });
+
+  if (latestInvoices.length === 0 || !latestInvoices) {
+    return null;
+  }
+
   return (
     <div className="flex w-full flex-col md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
